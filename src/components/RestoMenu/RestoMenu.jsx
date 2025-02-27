@@ -372,16 +372,17 @@ import {axiosInstance} from "../../config/axiosinstance"; // Ensure axios instan
       data:{restaurantId,menuItemId,quantity}
     });
 
-    // fetchCartCount();
+    // fetchCartCount(); 
 
     console.log("response===++", response);
     toast.success("Added to cart");
   } catch (error) {
     // console.log("Error adding item to cart:", error?.response?.data?.message)
      console.log(error);
-    toast.error("Failed to add to Cart");
+    toast.error("Failed to add to Cart"); 
   }
-};
+}; 
+
 
 const notify =() => toast('Added to Cart')
 const handleAddtoCartClick = () =>{

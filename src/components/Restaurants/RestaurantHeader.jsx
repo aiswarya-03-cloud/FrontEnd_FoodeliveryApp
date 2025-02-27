@@ -1,233 +1,12 @@
 
 // import React, { useState } from "react";
-// import { AppBar, Toolbar, IconButton, Avatar, Badge, Menu, MenuItem, Drawer, List, ListItem, ListItemText, Box } from "@mui/material";
-// import NotificationsIcon from "@mui/icons-material/Notifications";
-// import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-// import MenuIcon from "@mui/icons-material/Menu";
-// import { Link, useNavigate } from "react-router-dom";
-
-// const RestaurantHeader = () => {
-//   const [anchorEl, setAnchorEl] = useState(null);
-//   const [drawerOpen, setDrawerOpen] = useState(false);
-//   const navigate = useNavigate();
-
-//   // Profile menu handlers
-//   const handleMenuOpen = (event) => setAnchorEl(event.currentTarget);
-//   const handleMenuClose = () => setAnchorEl(null);
-//   const handleLogout = () => {
-//     console.log("Logging out...");
-//     handleMenuClose();
-//     navigate("/login"); // Redirect to login page
-//   };
-
-//   const handleUpdateProfile = () => {
-//     handleMenuClose();
-//     navigate("/update-profile"); // Navigate to Update Profile page
-//   };
-
-//   // Toggle drawer for mobile view
-//   const toggleDrawer = (open) => () => setDrawerOpen(open);
-
-//   return (
-//     <AppBar position="static" sx={{ background: "#000", padding: "10px" }}>
-//       <Toolbar sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        
-//         {/* Left Section - Logo & Mobile Menu Icon */}
-//         <Box sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
-//           <IconButton edge="start" color="inherit" onClick={toggleDrawer(true)} sx={{ display: { xs: "block", md: "none" } }}>
-//             <MenuIcon />
-//           </IconButton>
-//           <img src="/public/Sizzler_Bytes_latest.png" className="footimage" alt="Logo" style={{ height: "50px" }} />
-//         </Box>
-
-//         {/* Drawer for Mobile Navigation */}
-//         <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
-//           <List sx={{ width: 250 }}>
-//             {["Home", "Profile", "Menu", "Orders", "Payment"].map((text) => (
-//               <ListItem button key={text} onClick={() => navigate(`/${text.toLowerCase()}`)}>
-//                 <ListItemText primary={text} />
-//               </ListItem>
-//             ))}
-//           </List>
-//         </Drawer>
-
-//         {/* Center Section - Links */}
-//         <Box sx={{ display: { xs: "none", md: "flex" }, gap: "30px", fontSize: "18px", fontWeight: "bold" }}>
-//           {["Home", "Profile", "Menu", "Orders", "Payment"].map((text) => (
-//             <Link key={text} to={`/${text.toLowerCase()}`} style={{ textDecoration: "none", color: "white" }}>
-//               {text}
-//             </Link>
-//           ))}
-//         </Box>
-
-//         {/* Right Section - Icons */}
-//         <Box sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
-          
-//           {/* Notification Icon */}
-//           <IconButton color="inherit">
-//             <Badge badgeContent={3} color="error">
-//               <NotificationsIcon />
-//             </Badge>
-//           </IconButton>
-
-//           {/* Cart Icon */}
-//           <IconButton color="inherit">
-//             <Badge badgeContent={2} color="error">
-//               <ShoppingCartIcon />
-//             </Badge>
-//           </IconButton>
-
-//           {/* Profile Picture */}
-//           <IconButton onClick={handleMenuOpen}>
-//             <Avatar src="https://randomuser.me/api/portraits/men/9.jpg" alt="Profile Pic" sx={{ width: 36, height: 36 }} />
-//           </IconButton>
-
-//           {/* Profile Dropdown Menu */}
-//           <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
-//             <MenuItem onClick={handleUpdateProfile}>Update Profile</MenuItem>
-//             <MenuItem onClick={handleLogout}>Logout</MenuItem>
-//           </Menu>
-//         </Box>
-//       </Toolbar>
-//     </AppBar>
-//   );
-// };
-
-
-/// NWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
-
-
-
-// import React, { useState } from "react";
-// import { AppBar, Toolbar, IconButton, Avatar, Badge, Menu, MenuItem, Drawer, List, ListItem, ListItemText, Box } from "@mui/material";
-// import NotificationsIcon from "@mui/icons-material/Notifications";
-// import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-// import MenuIcon from "@mui/icons-material/Menu";
-// import { Link, useNavigate } from "react-router-dom";
-
-// const RestaurantHeader = () => {
-//   const [anchorEl, setAnchorEl] = useState(null);
-//   const [drawerOpen, setDrawerOpen] = useState(false);
-//   const navigate = useNavigate();
-
-//   // Profile menu handlers
-//   const handleMenuOpen = (event) => setAnchorEl(event.currentTarget);
-//   const handleMenuClose = () => setAnchorEl(null);
-//   const handleLogout = () => {
-//     console.log("Logging out...");
-//     handleMenuClose();
-//     window.location.href = "http://localhost:5173"; // Redirect to localhost:5173
-//   };
-
-//   const handleUpdateProfile = () => {
-//     handleMenuClose();
-//     navigate("/update-profile"); // Navigate to Update Profile page
-//   };
-
-//   // Toggle drawer for mobile view
-//   const toggleDrawer = (open) => () => setDrawerOpen(open);
-
-//   return (
-//     <AppBar position="static" sx={{ background: "#000", padding: "10px" }}>
-//       <Toolbar sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        
-//         {/* Left Section - Logo & Mobile Menu Icon */}
-//         <Box sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
-//           <IconButton edge="start" color="inherit" onClick={toggleDrawer(true)} sx={{ display: { xs: "block", md: "none" } }}>
-//             <MenuIcon />
-//           </IconButton>
-//           <img src="/public/Sizzler_Bytes_latest.png" className="footimage" alt="Logo" style={{ height: "50px" }} />
-//         </Box>
-
-//         {/* Drawer for Mobile Navigation */}
-//         <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
-//           <List sx={{ width: 250 }}>
-//             {[{
-//               text: "Home", path: "/home"
-//             }, {
-//               text: "Profile", path: "/profile"
-//             }, {
-//               text: "Menu", path: "/viewmenu"
-//             }, {
-//               text: "Orders", path: "/orders"
-//             }, {
-//               text: "Payment", path: "/payment"
-//             }].map((item) => (
-//               <ListItem button key={item.text} onClick={() => navigate(item.path)}>
-//                 <ListItemText primary={item.text} />
-//               </ListItem>
-//             ))}
-//           </List>
-//         </Drawer>
-
-//         {/* Center Section - Links */}
-//         <Box sx={{ display: { xs: "none", md: "flex" }, gap: "30px", fontSize: "18px", fontWeight: "bold" }}>
-//           {[{
-//             text: "Home", path: "/home"
-//           }, {
-//             text: "Profile", path: "/profile"
-//           }, {
-//             text: "Menu", path: "/viewmenu"
-//           }, {
-//             text: "Orders", path: "/orders"
-//           }, {
-//             text: "Payment", path: "/payment"
-//           }].map((item) => (
-//             <Link key={item.text} to={item.path} style={{ textDecoration: "none", color: "white" }}>
-//               {item.text}
-//             </Link>
-//           ))}
-//         </Box>
-
-//         {/* Right Section - Icons */}
-//         <Box sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
-          
-//           {/* Notification Icon */}
-//           <IconButton color="inherit">
-//             <Badge badgeContent={0} color="error">
-//               <NotificationsIcon />
-//             </Badge>
-//           </IconButton>
-
-//           {/* Cart Icon */}
-//           <IconButton color="inherit">
-//             <Badge badgeContent={0} color="error">
-//               <ShoppingCartIcon />
-//             </Badge>
-//           </IconButton>
-
-//           {/* Profile Picture */}
-//           <IconButton onClick={handleMenuOpen}>
-//             <Avatar src="https://randomuser.me/api/portraits/men/9.jpg" alt="Profile Pic" sx={{ width: 36, height: 36 }} />
-//           </IconButton>
-
-//           {/* Profile Dropdown Menu */}
-//           <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
-//             <MenuItem onClick={handleUpdateProfile}>Update Profile</MenuItem>
-//             <MenuItem onClick={handleLogout}>Logout</MenuItem>
-//           </Menu>
-//         </Box>
-//       </Toolbar>
-//     </AppBar>
-//   );
-// };
-
-// export default RestaurantHeader;
-
-//////////Newwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-
-
-
-
-
-
-
-// import React, { useState } from "react";
 // import { AppBar, Toolbar, IconButton, Avatar, Badge, Menu, MenuItem, Drawer, List, ListItem, ListItemText, Box, Switch } from "@mui/material";
 // import NotificationsIcon from "@mui/icons-material/Notifications";
 // import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 // import MenuIcon from "@mui/icons-material/Menu";
 // import { Link, useNavigate } from "react-router-dom";
+// import {axiosInstance} from "../../config/axiosinstance";
+// import {toast} from 'react-toastify';
 
 // const RestaurantHeader = () => {
 //   const [anchorEl, setAnchorEl] = useState(null);
@@ -238,16 +17,30 @@
 //   // Profile menu handlers
 //   const handleMenuOpen = (event) => setAnchorEl(event.currentTarget);
 //   const handleMenuClose = () => setAnchorEl(null);
-//   const handleLogout = () => {
-//     console.log("Logging out...");
-//     handleMenuClose();
-//     navigate("/"); // Redirect using navigate
-//   };
+
+
+
+  
+//     const handleLogout = async () => {
+//       console.log("Logging out...");
+      
+//         await  axiosInstance.post("/user/logout");
+//         toast.success("Logged out successfully!");
+//         navigate("/");
+    
+//     };
+  
+  
 
 //   const handleUpdateProfile = () => {
 //     handleMenuClose();
-//     navigate("/update-profile"); // Navigate to Update Profile page
+//     // navigate("/update-profile"); // Navigate to Update Profile page
+//     navigate("/updateprofile"); 
+
 //   };
+
+
+  
 
 //   // Toggle drawer for mobile view
 //   const toggleDrawer = (open) => () => setDrawerOpen(open);
@@ -333,7 +126,7 @@
 
 //           {/* Profile Dropdown Menu */}
 //           <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
-//             <MenuItem onClick={handleUpdateProfile}>Update Profile</MenuItem>
+//             <MenuItem onClick={handleUpdateProfile}>Profile</MenuItem>
 //             <MenuItem onClick={handleLogout}>Logout</MenuItem>
 //           </Menu>
 //         </Box>
@@ -344,7 +137,9 @@
 
 // export default RestaurantHeader;
 
-//--------------------------------------------------------------------------------------------------------------
+// //--------------------------------------------------------------------------------------------------------------
+
+
 
 import React, { useState, useEffect,useContext } from "react";
 import { AppBar, Toolbar, IconButton, Avatar, Badge, Menu, MenuItem, Drawer, List, ListItem, ListItemText, Box, Switch } from "@mui/material";
@@ -411,7 +206,8 @@ const RestaurantHeader = () => {
 
   const handleUpdateProfile = () => {
     handleMenuClose();
-    navigate("/update-profile"); // Navigate to Update Profile page
+    // navigate("/update-profile"); // Navigate to Update Profile page
+    navigate("/updateprofile"); 
   };
 
   return (
@@ -451,7 +247,7 @@ const RestaurantHeader = () => {
 
           {/* Profile Dropdown Menu */}
           <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
-            <MenuItem onClick={handleUpdateProfile}>Update Profile</MenuItem>
+            <MenuItem onClick={handleUpdateProfile}>Profile</MenuItem>
             <MenuItem onClick={handleLogout}>Logout</MenuItem>
           </Menu>
         </Box>
@@ -461,4 +257,3 @@ const RestaurantHeader = () => {
 };
 
 export default RestaurantHeader;
-

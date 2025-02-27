@@ -114,7 +114,7 @@ import Burger from './pages/FoodItemsPageLayout/Burger';
 //import Profile from './pages/User/UserProfile';
 import LoginPopUp from './components/LoginPopup/LoginPopup';
 import AdminLayout from './components/Admin/AdminLayout';
-import PrimarySearchAppBar from './components/Admin/m';
+import PrimarySearchAppBar from './components/Admin/AdminHeader';
 import Restaurant from './pages/Restaurant/Restaurant';
 import UserProfile from './pages/User/UserProfile';
 import RestaurantMenuItems from './pages/RestaurantMenuItemsLayout/RestaurantMenuItems';
@@ -138,6 +138,8 @@ import AdminLoginPopUp from './components/Admin/Adminn';
 import AdminAuth from './components/Admin/AdminLogin';
 import AdminSignup from './components/Admin/Adminn';
 import AdminHeadernavbar from './components/Admin/Admin_Header';
+import ProfileUpdate from './pages/ProfileUpdate';
+import ProfileCard from './pages/Profile';
 
 
 export default function App() {
@@ -186,6 +188,8 @@ export default function App() {
            {/* <Route path="/admin/login" element={<AdminAuth />} /> */}
            {/* <Route path="/add" element={<AdminHeadernavbar />} /> */}
            <Route path="/add" element={<Add />} />
+           {/* <Route path="/updateprofile" element={<ProfileUpdate />} /> */}
+           <Route path="/updateprofile" element={<ProfileCard />} />
            
            
            <Route path="/admin/signup" element={<AdminSignup />} />
